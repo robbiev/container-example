@@ -29,7 +29,6 @@ static int child_exec(void *stuff)
                 exit(-1);
         }
         */
-        /*
         // sethostname
         const char * new_hostname = "myhostname";
         if (sethostname(new_hostname, strlen(new_hostname)) != 0) {
@@ -37,7 +36,6 @@ static int child_exec(void *stuff)
                         strerror(errno));
                 exit(-1);
         }
-        */
         if (execvp(args->argv[0], args->argv) != 0) {
                 fprintf(stderr, "failed to execvp argments %s\n",
                         strerror(errno));
@@ -52,7 +50,7 @@ int main(int argc, char **argv)
         struct clone_args args;
         args.argv = &argv[1];
 
-        int clone_flags = CLONE_NEWNET | SIGCHLD;
+        int clone_flags = CLONE_NEWUTS | SIGCHLD;
 
         // the result of this call is that our child_exec will be run in another
         // process returning it's pid

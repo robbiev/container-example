@@ -1,1 +1,2 @@
 sudo unshare --net ip a
+sudo unshare --uts -- /bin/bash -c 'hostname thing && hostname'
