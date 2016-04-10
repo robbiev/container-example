@@ -1,0 +1,3 @@
+https://gist.github.com/jfrazelle/c771c63c376236bd419c
+https://gist.github.com/jfrazelle/0d581a5085172c5ee2ba
+http://containersummit.io/events/nyc-2016/videos/building-containers-in-pure-bash-and-c
